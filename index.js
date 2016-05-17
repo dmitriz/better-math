@@ -4,8 +4,6 @@ var some = require('lodash/some')
 
 var Big = require('big.js')
 
-// console.log(isFinite(1, 1))
-
 module.exports = {
   forceFinite: forceFinite,
   add: function (x, y) {
