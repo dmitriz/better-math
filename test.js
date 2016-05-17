@@ -1,6 +1,5 @@
 // test.js
 var fn = require('./')
-// var Big = require('big.js')
 
 describe('Integer addition', function () {
   it('should add integers', function () {
@@ -70,8 +69,19 @@ describe('Treat types other than number as illegal', function () {
   })
   it('should throw error if one argument is string', function () {
     expect(function () { return fn.add(1, '') }).toThrow()
-    // expect(function () { return fn.add('1', 1) }).toThrow()
-    expect(function () { return fn.add(true, true) }).toThrow()
+    expect(function () { return fn.add('1', 1) }).toThrow()
+    expect(function () { return fn.add(-33.3, '-3.2') }).toThrow()
+  })
+  it('should throw error if one argument is array', function () {
+    expect(function () { return fn.add(1, []) }).toThrow()
+    expect(function () { return fn.add([1, 2], 1) }).toThrow()
+    expect(function () { return fn.add([-1], -3.2) }).toThrow()
+  })
+  it('should throw error if one argument is object', function () {
+    expect(function () { return fn.add({}, {}) }).toThrow()
+    expect(function () { return fn.add(11, {}) }).toThrow()
+    expect(function () { return fn.add({a: 5}, 1) }).toThrow()
+    expect(function () { return fn.add(0, {aa: -3.2, 4: '1'}) }).toThrow()
   })
 })
 
