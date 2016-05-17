@@ -84,5 +84,3 @@ describe('Treat types other than number as illegal', function () {
     expect(function () { return fn.add(0, {aa: -3.2, 4: '1'}) }).toThrow()
   })
 })
-
-
