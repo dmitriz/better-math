@@ -1,5 +1,6 @@
 // test.js
 var fn = require('./')
+var div = fn.div
 
 /**
  * Finite number guard
@@ -18,11 +19,28 @@ describe('Finite number guard', function () {
     expect(function () { return fn.forceFinite([]) }).toThrow()
   })
   it('should accept finite numbers', function () {
+    expect(function () { return fn.forceFinite(0) }).not.toThrow()
     expect(function () { return fn.forceFinite(1, 2) }).not.toThrow()
     expect(function () { return fn.forceFinite(-1) }).not.toThrow()
     expect(function () { return fn.forceFinite(-0) }).not.toThrow()
     expect(function () { return fn.forceFinite(-12.33) }).not.toThrow()
     expect(function () { return fn.forceFinite(12.3, 0.5, 0.202) }).not.toThrow()
+  })
+})
+
+/**
+ * NonZero guard
+ */
+describe('NonZero guard', function () {
+  it('should throw errors when number is 0', function () {
+    expect(function () { return fn.forceNonZero(0) }).toThrow()    
+    expect(function () { return fn.forceNonZero(-0) }).toThrow()    
+  })
+  it('should accept finite nonzero numbers', function () {
+    expect(function () { return fn.forceNonZero(10) }).not.toThrow()        
+    expect(function () { return fn.forceNonZero(-1) }).not.toThrow()        
+    expect(function () { return fn.forceNonZero(0.00003) }).not.toThrow()        
+    expect(function () { return fn.forceNonZero(-0.000222) }).not.toThrow()        
   })
 })
 
@@ -111,5 +129,19 @@ describe('Treat types other than number as illegal', function () {
     expect(function () { return fn.add(11, {}) }).toThrow()
     expect(function () { return fn.add({a: 5}, 1) }).toThrow()
     expect(function () { return fn.add(0, {aa: -3.2, 4: '1'}) }).toThrow()
+  })
+})
+
+describe('Division', function () {
+  it('should divide finite numbers precisely when possible', function () {
+    expect(div(2, 1)).toBe(2)
+    expect(div(2, -4)).toBe(-0.5)
+    expect(div(2.2, 2)).toBe(1.1)
+    expect(div(-0, 2)).toBe(0)
+    expect(div(4.4, 2.2)).toBe(2)
+  })
+  it('should throw error when divide by 0', function () {
+    expect(function () { return div(-1, 0) }).toThrow()
+    expect(function () { return div(15.6, 0) }).toThrow()
   })
 })
