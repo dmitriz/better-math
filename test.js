@@ -1,6 +1,22 @@
 // test.js
 var fn = require('./')
 
+/**
+ * Finite number guard
+ */
+describe('Finite number guard', function () {
+  it('should throw errors for types other than finite numbers', function () {
+    expect(function () { return fn.forceFinite('11') }).toThrow()
+    expect(function () { return fn.forceFinite(-1, '11') }).toThrow()
+    expect(function () { return fn.forceFinite([-1, '11']) }).toThrow()
+  })
+  it('should accept finite numbers', function () {
+  })
+})
+
+/**
+ * Addition
+ */
 describe('Integer addition', function () {
   it('should add integers', function () {
     expect(fn.add(1, 2)).toBe(3)
