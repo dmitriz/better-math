@@ -1,17 +1,21 @@
 {
   "version": "1.1.0",
   "name": "better-math",
-  "main": "index.js",
-  "description": "Test project",
+  "description": "Math operations more reliable and predictable",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dmitriz"
+    "url": "https://github.com/dmitriz/better-math"
   },
   "scripts": {
     "start": "nr dev",
     "test": "karma start",
-    "dev": "open http://localhost:8080/ && webpack-dev-server"
+    "dev": "open http://localhost:8080/ && webpack-dev-server",
+    "pub": "npm version patch && npm publish && git push",
+    "sync": "git ac && git pull --rebase && git push"
   },
+  "files": [
+    "index.js"
+  ],
   "engines": {
     "node": ">=0.10.0"
   },
@@ -37,5 +41,8 @@
       "angular",
       "document"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/dmitriz/better-math/issues"
   }
 }

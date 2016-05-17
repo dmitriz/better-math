@@ -1,6 +1,7 @@
 # better-math
 Mathematical operations performed reliably and intuitively
 
+
 ## Why?
 
 - No ugly approximation:
@@ -27,9 +28,26 @@ Mathematical operations performed reliably and intuitively
 ```
 
 
+## Install
+
+```sh
+$ npm install --save better-math
+```
+
+
+## Usage
+
+```js
+var math = require('better-math')
+
+math.add(0.1, 0.2) // => 0.3
+math.add(0.1, -0.2) // => -0.1
+```
+
+
 ## API
 
-### maths.add (number1, number2)
+### math.add (number1, number2)
 
 #### number1, number2
 
@@ -45,10 +63,12 @@ No `Infinities`, no `NaN`s, no `null`, no strings (not even `'1'`!):
 ## Status
 Currently `.add` is implemented and **thoroughly tested**
 
+
 ## Credit
 - This library is a tiny wrapper around the wonderful
 (arbitrary-precision decimal arithmetic library Big.js)[https://github.com/MikeMcl/big.js/] that deserves most credit
 - The (also wonderful))[LoDash](https://lodash.com/) is used for type checking
+
 
 ## License
 
