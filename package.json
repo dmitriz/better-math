@@ -20,5 +20,15 @@
   },
   "dependencies": {
     "big.js": "^3.1.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "expect",
+      "it",
+      "beforeEach",
+      "angular",
+      "document"
+    ]
   }
 }
