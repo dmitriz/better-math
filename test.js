@@ -6,11 +6,23 @@ var fn = require('./')
  */
 describe('Finite number guard', function () {
   it('should throw errors for types other than finite numbers', function () {
+    expect(function () { return fn.forceFinite(NaN) }).toThrow()
+    expect(function () { return fn.forceFinite(Infinity) }).toThrow()
     expect(function () { return fn.forceFinite('11') }).toThrow()
     expect(function () { return fn.forceFinite(-1, '11') }).toThrow()
     expect(function () { return fn.forceFinite([-1, '11']) }).toThrow()
+    expect(function () { return fn.forceFinite(undefined) }).toThrow()
+    expect(function () { return fn.forceFinite(null) }).toThrow()
+    expect(function () { return fn.forceFinite({}, 2.2) }).toThrow()
+    expect(function () { return fn.forceFinite({}, []) }).toThrow()
+    expect(function () { return fn.forceFinite([]) }).toThrow()
   })
   it('should accept finite numbers', function () {
+    expect(function () { return fn.forceFinite(1, 2) }).not.toThrow()
+    expect(function () { return fn.forceFinite(-1) }).not.toThrow()
+    expect(function () { return fn.forceFinite(-0) }).not.toThrow()
+    expect(function () { return fn.forceFinite(-12.33) }).not.toThrow()
+    expect(function () { return fn.forceFinite(12.3, 0.5, 0.202) }).not.toThrow()
   })
 })
 

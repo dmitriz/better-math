@@ -10,7 +10,6 @@ module.exports = {
   forceFinite: forceFinite,
   add: function (x, y) {
     forceFinite(x, y)
-    // if (!isFinite(x) || !isFinite(y)) throw Error('Both arguments must be finite numbers')
     return Number(Big(x).plus(y))
   }
 }
