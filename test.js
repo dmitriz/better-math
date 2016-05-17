@@ -16,6 +16,7 @@ describe('Integer addition', function () {
 describe('Decimal real number and and subtract', function () {
   it('should perform exact decimal addition', function () {
     expect(0.1 + 0.2).not.toBe(0.3)
+    expect(fn.add(0.1, 0.2)).toBe(0.3)
     expect(fn.add(0.10, 0.2)).toBe(0.3)
     expect(fn.add(0.01, 0.02)).toBe(0.03)
     expect(fn.add(1.11, 2.22)).toBe(3.33)

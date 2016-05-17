@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "name": "better-maths",
+  "name": "better-math",
   "main": "index.js",
   "description": "Test project",
   "repository": {
@@ -12,7 +12,13 @@
     "test": "karma start",
     "dev": "open http://localhost:8080/ && webpack-dev-server"
   },
-  "keywords": [],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "keywords": [
+    "maths",
+    "add"
+  ],
   "author": "Dmitri Zaitsev <dmitri14@gmail.com> (https://github.com/dmitriz)",
   "license": "MIT",
   "devDependencies": {
