@@ -1,5 +1,5 @@
 // index.js
-"use strict";
+'use strict'
 
 var isFinite = require('lodash/isFinite')
 var some = require('lodash/some')
@@ -14,9 +14,9 @@ module.exports = {
     return Number(Big(x).plus(y))
   },
   div: function (x, y) {
-  	forceFinite(x, y)
-  	forceNonZero(y)
-  	return Number(Big(x).div(y))
+    forceFinite(x, y)
+    forceNonZero(y)
+    return Number(Big(x).div(y))
   }
 }
 
@@ -27,7 +27,7 @@ function forceFinite () {
 }
 
 function forceNonZero () {
-  if (some(arguments, function (arg) { return 0 === arg })) {
+  if (some(arguments, function (arg) { return arg === 0 })) {
     throw Error('Nonzero number must be provided instead of ' + JSON.stringify(arguments))
-  }	
+  }
 }

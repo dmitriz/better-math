@@ -33,14 +33,14 @@ describe('Finite number guard', function () {
  */
 describe('NonZero guard', function () {
   it('should throw errors when number is 0', function () {
-    expect(function () { return fn.forceNonZero(0) }).toThrow()    
-    expect(function () { return fn.forceNonZero(-0) }).toThrow()    
+    expect(function () { return fn.forceNonZero(0) }).toThrow()
+    expect(function () { return fn.forceNonZero(-0) }).toThrow()
   })
   it('should accept finite nonzero numbers', function () {
-    expect(function () { return fn.forceNonZero(10) }).not.toThrow()        
-    expect(function () { return fn.forceNonZero(-1) }).not.toThrow()        
-    expect(function () { return fn.forceNonZero(0.00003) }).not.toThrow()        
-    expect(function () { return fn.forceNonZero(-0.000222) }).not.toThrow()        
+    expect(function () { return fn.forceNonZero(10) }).not.toThrow()
+    expect(function () { return fn.forceNonZero(-1) }).not.toThrow()
+    expect(function () { return fn.forceNonZero(0.00003) }).not.toThrow()
+    expect(function () { return fn.forceNonZero(-0.000222) }).not.toThrow()
   })
 })
 
