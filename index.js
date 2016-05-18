@@ -1,4 +1,6 @@
 // index.js
+"use strict";
+
 var isFinite = require('lodash/isFinite')
 var some = require('lodash/some')
 
