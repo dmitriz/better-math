@@ -63,7 +63,7 @@ Type: `real number` for both arguments *strictly enforced* with *no exceptions!*
 No `Infinities`, no `NaN`s, no `null`, no strings (not even `'1'`!):
 
 ```js
-  if (!isFinite(x) || !isFinite(y)) throw Error('Both arguments must be finite numbers')
+  if (!_.isFinite(x) || !_.isFinite(y)) throw Error('Both arguments must be finite numbers')
 ```
 
 
