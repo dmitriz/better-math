@@ -2,6 +2,13 @@
 Mathematical operations performed reliably and intuitively
 
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
+[![MIT License](https://img.shields.io/npm/l/better-math.svg?style=flat-square)](http://opensource.org/licenses/MIT) 
+[![npm downloads](https://img.shields.io/npm/dm/better-math.svg?style=flat-square)](https://www.npmjs.com/package/better-math)
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
+
 ## Why?
 
 - No ugly approximation:
@@ -61,13 +68,13 @@ No `Infinities`, no `NaN`s, no `null`, no strings (not even `'1'`!):
 
 
 ## Status
-Currently `.add` is implemented and **thoroughly tested**
+Currently `.add` is implemented and [**thoroughly tested**](https://github.com/dmitriz/better-math/blob/master/test.js)
 
 
 ## Credit
 - This library is a tiny wrapper around the wonderful
-(arbitrary-precision decimal arithmetic library Big.js)[https://github.com/MikeMcl/big.js/] that deserves most credit
-- The (also wonderful))[LoDash](https://lodash.com/) is used for type checking
+[arbitrary-precision decimal arithmetic library Big.js](https://github.com/MikeMcl/big.js/) that deserves most credit
+- The (also wonderful)) [LoDash](https://lodash.com/) is used for type checking
 
 
 ## License
