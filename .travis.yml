@@ -6,9 +6,8 @@ notifications:
   email: true
 node_js:
   - 'stable'
-  - '1'
-  - '4'
-  - '6'
+  - '10'
+  - '8'
 # Configure Travis with Firefox
 # http://karma-runner.github.io/0.13/plus/travis.html
 script: karma start karma.conf.js --single-run --browsers Firefox
