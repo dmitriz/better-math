@@ -6,7 +6,7 @@ Mathematical operations performed reliably and intuitively
 [![MIT License](https://img.shields.io/npm/l/better-math.svg?style=flat-square)](http://opensource.org/licenses/MIT) 
 [![npm downloads](https://img.shields.io/npm/dm/better-math.svg?style=flat-square)](https://www.npmjs.com/package/better-math)
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard) [![Greenkeeper badge](https://badges.greenkeeper.io/dmitriz/better-math.svg)](https://greenkeeper.io/)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard) 
 
 
 ## Why?
