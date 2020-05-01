@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "big.js": "5.2.2",
-    "lodash": "4.17.12",
+    "lodash": "4.17.15",
     "snyk": "1.316.1"
   },
   "standard": {
