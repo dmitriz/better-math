@@ -10,7 +10,9 @@
     "start": "karma start",
     "dev": "open http://localhost:8080/ && webpack-dev-server",
     "pub": "npm version patch && npm publish && git push",
-    "sync": "git add . && git commit; git pull && git push"
+    "sync": "git add . && git commit; git pull && git push",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "index.js"
@@ -29,7 +31,8 @@
   },
   "dependencies": {
     "big.js": "5.2.2",
-    "lodash": "4.17.11"
+    "lodash": "4.17.11",
+    "snyk": "^1.316.1"
   },
   "standard": {
     "globals": [
@@ -43,5 +46,6 @@
   },
   "bugs": {
     "url": "https://github.com/dmitriz/better-math/issues"
-  }
+  },
+  "snyk": true
 }
